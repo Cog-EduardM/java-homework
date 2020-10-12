@@ -82,13 +82,13 @@ public class Week1Homework {
         System.out.println("------------------");
 
         byte[] number = new byte[10];
-        for (int i = 0; i<10; i++) {
-            number[i] = (byte)(Math.floor(Math.random()*100));
+        for (int i=0; i<10; i++) {
+            number[i] = (byte)(Math.floor(Math.random()*100 + 1));
         }
 
         // Using a for loop, print only the even numbers
         for (int i=0; i<number.length; i++){
-            if (number[i] % 2 ==0)
+            if (number[i] % 2 == 0)
                 System.out.println("Index: " + i + ", Value: " + number[i]);
         }
     }
