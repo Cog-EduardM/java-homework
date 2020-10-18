@@ -1,12 +1,14 @@
-package com.example.week1homework;
+package com.example.homeworks.week1;
 
-public class Week1Homework {
-    public static void main(String[] args) {
+import com.example.utils.HomeworkUtils;
+import com.example.homeworks.Homework;
+
+public class Week1Homework extends HomeworkUtils implements Homework {
+
+    private void runExercise5() {
+        this.printExerciseHeading(5);
+
         // 5. Define and print on separate lines following data types:
-        System.out.println("------------------");
-        System.out.println("-   EXERCISE 5   -");
-        System.out.println("------------------");
-
         // Primitive - boolean
         boolean myPrimitiveBoolean = true;
         System.out.println("myPrimitiveBoolean: " + myPrimitiveBoolean);
@@ -34,12 +36,12 @@ public class Week1Homework {
         // Non primitive - Integer
         Integer myNonPrimitiveInteger = 15;
         System.out.println("myNonPrimitiveInteger: " + myNonPrimitiveInteger);
+    }
+
+    private void runExercise6() {
+        this.printExerciseHeading(6);
 
         // 6. Define some integer variables. Perform the operations below and print the result
-        System.out.println("------------------");
-        System.out.println("-   EXERCISE 6   -");
-        System.out.println("------------------");
-
         int a = 17;
         int b = 3;
 
@@ -55,18 +57,22 @@ public class Week1Homework {
 
         // Compare two variables using the comparison operator
         System.out.println("b is greater than a - " + (b>a));
+    }
 
-        // 7. Using an if-else statement, compare the values, and
+    private void runExercise7() {
+        this.printExerciseHeading(7);
+
         /*
-         * if a is larger, print "<value of a> is larger than <value of b>"
-         * if b is larger, print "<value of b> is larger than <value of a>"
-         * if numbers are equal, print "<value of a> is equal to <value of b>"
+            7. Define two integer variables, a and b.
+               Using an if-else statement, compare the values, and:
+                - if a is larger, print "<value of a> is larger than <value of b>"
+                - if b is larger, print "<value of b> is larger than <value of a>"
+                - if numbers are equal, print "<value of a> is equal to <value of b>"
          */
-        System.out.println("------------------");
-        System.out.println("-   EXERCISE 7   -");
-        System.out.println("------------------");
-
+        int a = 5;
+        int b = 7;
         String message;
+
         if(a>b) {
             message = a + " is larger than " + b;
         } else if (b>a) {
@@ -74,19 +80,33 @@ public class Week1Homework {
         } else {
             message = a + " is equal to " + b;
         }
+
+        System.out.println("a: " + a);
+        System.out.println("b: " + b);
         System.out.println(message);
+    }
 
-        // 8. Define a number array of 10 elements, using random values from range 1 to 100.
-        // Using a for loop, print only the even numbers
-        System.out.println("------------------");
-        System.out.println("-   EXERCISE 8   -");
-        System.out.println("------------------");
+    private void runExercise8() {
+        this.printExerciseHeading(8);
 
+        /*
+            8. Define a number array of 10 elements, using random values from range 1 to 100.
+               Using a for loop, print only the even numbers
+        */
         byte[] number = new byte[10];
+
         for (int i=0; i<number.length; i++) {
-            number[i] = (byte)(Math.floor(Math.random()*100 + 1));
+            number[i] = (byte)(this.generateRandomNumberInRange(1,100));
             if (number[i] % 2 == 0)
                 System.out.println("Index: " + i + ", Value: " + number[i]);
         }
+    }
+
+    public void runHomework() {
+        this.printHomeworkHeading(1);
+        this.runExercise5();
+        this.runExercise6();
+        this.runExercise7();
+        this.runExercise8();
     }
 }
