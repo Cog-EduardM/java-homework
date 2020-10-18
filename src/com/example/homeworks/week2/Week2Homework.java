@@ -109,7 +109,6 @@ public class Week2Homework extends HomeworkUtils implements Homework {
         System.out.println("- List of random words: " + this.randomWordsList.toString());
         System.out.println("- String of words that start with vowel: " + this.vowelWords);
         System.out.println("- List of words that start with vowel: " + this.consonantWords.toString());
-
     }
 
     private void runExercise4() {
@@ -166,5 +165,4 @@ public class Week2Homework extends HomeworkUtils implements Homework {
         this.runExercise3();
         this.runExercise4();
     }
-
 }
