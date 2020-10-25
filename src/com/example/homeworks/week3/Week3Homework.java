@@ -2,14 +2,9 @@ package com.example.homeworks.week3;
 
 import com.example.homeworks.Homework;
 import com.example.utils.HomeworkUtils;
-import com.sun.jdi.CharValue;
-import com.sun.jdi.StringReference;
-
-import java.io.Serializable;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Stream;
 
 public class Week3Homework extends HomeworkUtils implements Homework {
 
@@ -18,6 +13,7 @@ public class Week3Homework extends HomeworkUtils implements Homework {
             2. Create a method that takes two strings as input,
                and returns true if the strings are equal in length
          */
+
         return (str1 != null) && (str2 != null) && str1.length() == str2.length();
     }
 
@@ -125,8 +121,7 @@ public class Week3Homework extends HomeworkUtils implements Homework {
                 cm.reset(str);
                 int vCount = vm.results().toArray().length;
                 int cCount = cm.results().toArray().length;
-
-                System.out.println(vCount);
+                
                 if (vCount > maxVowels) {
                     vWords.clear();
                     vWords.add(str);
@@ -230,5 +225,4 @@ public class Week3Homework extends HomeworkUtils implements Homework {
         System.out.println(this.runExercise7("thisstringisweird"));
         System.out.println(this.runExercise7("thissstringgisweirdddd"));
     }
-
 }
