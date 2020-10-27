@@ -224,5 +224,6 @@ public class Week3Homework extends HomeworkUtils implements Homework {
         System.out.println(this.runExercise7("this string is weird"));
         System.out.println(this.runExercise7("thisstringisweird"));
         System.out.println(this.runExercise7("thissstringgisweirdddd"));
+
     }
 }

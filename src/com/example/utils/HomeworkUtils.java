@@ -19,6 +19,11 @@ public class HomeworkUtils {
         System.out.println("__________________");
     }
 
+    public void printExerciseHeading(String exerciseName) {
+        System.out.println(String.format("\n    EXERCISE: %s", exerciseName));
+        System.out.println(new String(new char[exerciseName.length() + 18]).replace('\0', '-'));
+    }
+
     protected int generateRandomNumberInRange(int min, int max) {
         return (int)Math.floor(Math.random()*(max-min + 1) + min);
     }
@@ -58,12 +63,12 @@ public class HomeworkUtils {
     public void printMap(Map<?,?> map) {
         Iterator<?> i = map.keySet().iterator();
 
-        while(i.hasNext())
-        {
+        while (i.hasNext()) {
             String key = i.next().toString();
             System.out.println("Key:  " + key + ", Value:   " + map.get(key));
         }
 
         System.out.println("\n");
     }
+
 }
