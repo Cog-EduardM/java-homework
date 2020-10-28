@@ -1,6 +1,6 @@
-package com.example.homeworks.week2;
+package com.example.homework.week2;
 
-import com.example.homeworks.Homework;
+import com.example.homework.Homework;
 import com.example.utils.HomeworkUtils;
 import java.util.*;
 

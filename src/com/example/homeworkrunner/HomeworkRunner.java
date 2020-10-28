@@ -1,9 +1,9 @@
 package com.example.homeworkrunner;
 
-import com.example.homeworks.week1.Week1Homework;
-import com.example.homeworks.week2.Week2Homework;
-import com.example.homeworks.week3.Week3Homework;
-import com.example.homeworks.week4.Week4Homework;
+import com.example.homework.week1.Week1Homework;
+import com.example.homework.week2.Week2Homework;
+import com.example.homework.week3.Week3Homework;
+import com.example.homework.week4.Week4Homework;
 
 public class HomeworkRunner {
 

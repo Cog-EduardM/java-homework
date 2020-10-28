@@ -1,4 +1,4 @@
-package com.example.homeworks.week4;
+package com.example.homework.week4;
 
 import java.util.*;
 import java.util.function.Predicate;
@@ -10,7 +10,7 @@ public class Organization {
 
     public Organization() {
         this.employees = new HashMap<>();
-        this.nextId = 0;
+        this.nextId = 1;
     }
 
     public Map<Integer, Employee> getEmployees() {

@@ -1,4 +1,4 @@
-package com.example.homeworks.week4;
+package com.example.homework.week4;
 
 enum Gender {
     FEMALE,

@@ -1,7 +1,7 @@
-package com.example.homeworks.week1;
+package com.example.homework.week1;
 
 import com.example.utils.HomeworkUtils;
-import com.example.homeworks.Homework;
+import com.example.homework.Homework;
 
 public class Week1Homework extends HomeworkUtils implements Homework {
 
