@@ -1,10 +1,10 @@
 package com.example.homework.week2;
 
-import com.example.homework.Homework;
+import com.example.homework.Runnable;
 import com.example.utils.HomeworkUtils;
 import java.util.*;
 
-public class Week2Homework extends HomeworkUtils implements Homework {
+public class Week2Homework extends HomeworkUtils implements Runnable {
     private String vowelWords;
     private List<String> consonantWords;
     private List<String> randomWordsList;

@@ -1,11 +1,11 @@
 package com.example.homework.week4;
 
-import com.example.homework.Homework;
+import com.example.homework.Runnable;
 import com.example.utils.HomeworkUtils;
 
 import java.util.*;
 
-public class Week4Homework extends HomeworkUtils implements Homework {
+public class Week4Homework extends HomeworkUtils implements Runnable {
     public void runHomework() {
         this.printHomeworkHeading(4);
 
@@ -216,7 +216,7 @@ public class Week4Homework extends HomeworkUtils implements Homework {
         printEmployee(org3.searchEmployee(3), "ID 3");
     }
 
-    private void printOrganization(Organization o, String objectName) {
+    private static void printOrganization(Organization o, String objectName) {
         System.out.println("Organization " + objectName + " {");
         System.out.println("EMPLOYEES: [");
 

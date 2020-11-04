@@ -1,9 +1,9 @@
 package com.example.homework.week1;
 
+import com.example.homework.Runnable;
 import com.example.utils.HomeworkUtils;
-import com.example.homework.Homework;
 
-public class Week1Homework extends HomeworkUtils implements Homework {
+public class Week1Homework extends HomeworkUtils implements Runnable {
 
     private void runExercise5() {
         this.printExerciseHeading(5);

@@ -1,5 +1,5 @@
 package com.example.homework;
 
-public interface Homework {
+public interface Runnable {
     void runHomework();
 }

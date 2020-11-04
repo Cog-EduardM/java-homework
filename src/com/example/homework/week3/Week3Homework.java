@@ -1,12 +1,12 @@
 package com.example.homework.week3;
 
-import com.example.homework.Homework;
+import com.example.homework.Runnable;
 import com.example.utils.HomeworkUtils;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Week3Homework extends HomeworkUtils implements Homework {
+public class Week3Homework extends HomeworkUtils implements Runnable {
 
     private boolean runExercise2(String str1, String str2) {
         /*
