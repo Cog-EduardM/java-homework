@@ -62,18 +62,17 @@ public class Week5Homework extends HomeworkUtils implements Runnable {
             boolean humanTurn = this.generateRandomNumberInRange(0,1) == 1;
 
             System.out.println("\nTurn " + ++turnNo);
+            System.out.println("Before attack - Human h2 ("+ h2.getInfo() + "), Alien a2 (" + a2.getInfo() + ")");
 
             if (humanTurn) {
-                System.out.println("Before attack - Human h2 ("+ h2.getInfo() + "), Alien a2 (" + a2.getInfo() + ")");
                 System.out.println("Human h2 shoots Alien a2...");
                 h2.shootAlien(a2);
-                System.out.println("After attack  - Human h2 ("+ h2.getInfo() + "), Alien a2 (" + a2.getInfo() + ")");
             } else {
-                System.out.println("Before attack - Human h2 ("+ h2.getInfo() + "), Alien a2 (" + a2.getInfo() + ")");
                 System.out.println("Alien a2 bites Human h2...");
                 a2.biteHuman(h2);
-                System.out.println("After attack  - Human h2 ("+ h2.getInfo() + "), Alien a2 (" + a2.getInfo() + ")");
             }
+
+            System.out.println("After attack  - Human h2 ("+ h2.getInfo() + "), Alien a2 (" + a2.getInfo() + ")");
         }
 
         if(h2.isDead()) {
