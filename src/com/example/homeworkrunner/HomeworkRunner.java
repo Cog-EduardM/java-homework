@@ -9,7 +9,7 @@ import com.example.homework.week5.Week5Homework;
 public class HomeworkRunner {
 
     public static void main(String[] args) {
-/*
+        /*
         Week1Homework h1 = new Week1Homework();
         h1.runHomework();
 
@@ -21,7 +21,8 @@ public class HomeworkRunner {
 
         Week4Homework h4 = new Week4Homework();
         h4.runHomework();
-*/
+        */
+
         Week5Homework h5 = new Week5Homework();
         h5.runHomework();
     }
