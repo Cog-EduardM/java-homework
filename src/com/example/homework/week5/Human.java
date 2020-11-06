@@ -4,20 +4,20 @@ public class Human implements Character {
 
     private int health;
     private int ammo;
-    private int foodLeft;
+    private int food;
     private boolean isDead;
 
     public Human() {
         this.health = 100;
         this.ammo = 200;
-        this.foodLeft = 3;
+        this.food = 3;
         this.isDead = false;
     }
 
     @Override
     public String getInfo() {
         return "health: " + this.getHealth() +
-                ", foodLeft: " + this.getFoodLeft() +
+                ", food: " + this.getFoodLeft() +
                 ", ammo: " + this.getAmmo() +
                 ", isDead: " + this.isDead();
     }
@@ -33,8 +33,8 @@ public class Human implements Character {
             this.health = 0;
             this.dies();
         } else {
-            if (health <= 25 && this.foodLeft > 0) {
-                this.heal();
+            if (health <= 25 && this.food > 0) {
+                this.eat();
             } else {
                 this.health = health;
             }
@@ -51,7 +51,7 @@ public class Human implements Character {
     }
 
     private int getFoodLeft() {
-        return this.foodLeft;
+        return this.food;
     }
 
     public int getAmmo() {
@@ -62,10 +62,10 @@ public class Human implements Character {
         this.ammo = Math.max(0, ammo);
     }
 
-    private void heal() {
+    private void eat() {
         System.out.println("    ...Human health restored.");
         this.health += 40;
-        this.foodLeft--;
+        this.food--;
     }
 
     public void shootAlien(Alien a) {

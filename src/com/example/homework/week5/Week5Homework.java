@@ -7,9 +7,14 @@ public class Week5Homework extends HomeworkUtils implements Runnable {
     public void runHomework() {
         this.printHomeworkHeading(5);
 
+        this.printExerciseHeading("Quick Test");
         runScriptedScenario();
+
+        this.printExerciseHeading("Random Scenario");
         runRandomizedScenario();
-        runGames(10000);
+
+        this.printExerciseHeading("100 Random Scenarios");
+        runGames(100);
     }
 
     /**
@@ -21,7 +26,11 @@ public class Week5Homework extends HomeworkUtils implements Runnable {
         int alienScore = 0, humanScore = 0;
 
         for (int i = 0; i < iterations; i++) {
+            System.out.println("\n\nGAME " + (i+1));
+            System.out.println("--------");
+
             int[] result = runRandomizedScenario();
+
             alienScore += result[0];
             humanScore += result[1];
         }
@@ -33,17 +42,15 @@ public class Week5Homework extends HomeworkUtils implements Runnable {
      * Method implements homework requirements:
      * <hr></hr>
      *
-     * <p><strong>1.</strong> Create two objects: {@link Human} and {@link Alien}</p>
+     * <strong>1.</strong> Create two objects: {@link Human} and {@link Alien}
      * <p></p>
-     * <p><strong>2.</strong> Alien bites human 1 time.
-     * Print human health and alien energy before and after this operation</p>
+     * <strong>2.</strong> Alien bites human 1 time.
+     * Print human health and alien energy before and after this operation
      * <p></p>
-     * <p><strong>3.</strong> Human shoots an alien 2 times.
-     * Print alien health and human ammo before and after this operation</p>
+     * <strong>3.</strong> Human shoots an alien 2 times.
+     * Print alien health and human ammo before and after this operation
      */
     private void runScriptedScenario() {
-        this.printExerciseHeading("Quick Test");
-
         //1
         Human h1 = new Human();
         Alien a1 = new Alien();
@@ -72,8 +79,6 @@ public class Week5Homework extends HomeworkUtils implements Runnable {
      * @return a string of two integers: first is Aliens's score, the second is Human's score
      */
     private int[] runRandomizedScenario() {
-        this.printExerciseHeading("Random scenario");
-
         Human h2 = new Human();
         Alien a2 = new Alien();
         int turnNo = 0;

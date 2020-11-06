@@ -10,7 +10,7 @@ public class Alien implements Character {
     public Alien() {
         this.health = 200;
         this.energy = 100;
-        this.potions = 5;
+        this.potions = 3;
         this.isDead = false;
     }
 
@@ -80,7 +80,8 @@ public class Alien implements Character {
                 damage = isCriticalHit() ? damage : 25;
                 h.setHealth(h.getHealth() - damage);
             } else if (this.energy >= 50) {
-                //refill energy for maximum damage, if there are remaining potions
+
+                //refill energy for maximum damage, if any potion left
                 if (this.potions > 0) {
                     this.drinkPotion();
                     damage = isCriticalHit() ? damage : 25;
