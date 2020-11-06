@@ -4,11 +4,13 @@ public class Alien implements Character {
 
     private int health;
     private int energy;
+    private int potions;
     private boolean isDead;
 
     public Alien() {
         this.health = 200;
         this.energy = 100;
+        this.potions = 5;
         this.isDead = false;
     }
 
@@ -16,6 +18,7 @@ public class Alien implements Character {
     public String getInfo() {
         return "health: " + this.getHealth() +
                 ", energy: " + this.getEnergy() +
+                ", potions: " + this.getPotions() +
                 ", isDead: " + this.isDead();
     }
 
@@ -49,17 +52,46 @@ public class Alien implements Character {
     }
 
     public void setEnergy(int energy) {
-        this.energy = energy < 0 ? 0 : energy;
+        this.energy = Math.max(0, energy);
+    }
+
+    private int getPotions() {
+        return this.potions;
+    }
+
+    private void drinkPotion() {
+        System.out.println("    ...Alien energy refilled.");
+        this.potions--;
+        this.energy = 100;
+    }
+
+    /**
+     * @return <strong>true</strong> - 20% of the time
+     */
+    private boolean isCriticalHit() {
+        return Math.random() < 0.2;
     }
 
     public void biteHuman(Human h) {
+        int damage = 60;
+
         if (!this.isDead()) {
             if (this.energy >= 80) {
-                h.setHealth(h.getHealth() - 25);
+                damage = isCriticalHit() ? damage : 25;
+                h.setHealth(h.getHealth() - damage);
             } else if (this.energy >= 50) {
-                h.setHealth(h.getHealth() - 15);
+                //refill energy for maximum damage, if there are remaining potions
+                if (this.potions > 0) {
+                    this.drinkPotion();
+                    damage = isCriticalHit() ? damage : 25;
+                } else {
+                    damage = isCriticalHit() ? damage : 15;
+                }
+
+                h.setHealth(h.getHealth() - damage);
             } else if (this.energy >= 10) {
-                h.setHealth(h.getHealth() - 10);
+                damage = isCriticalHit() ? damage : 10;
+                h.setHealth(h.getHealth() - damage);
             }
 
             this.setEnergy(this.energy - 10);
